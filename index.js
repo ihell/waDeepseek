@@ -11,6 +11,20 @@ const client = new Client({
 })
 
 client.on('qr', qr => qrcode.generate(qr, { small: true }))
+client.on('authenticated', () => console.log('di scan......'))
+client,on('ready', () => console,log('service ready to go...'))
+
+client.on('message', async message => {
+    const messageBody = message.body.trim().toLocaleLowerCase()
+     if (messageBody.startsWith("ai:")) {
+        console.log('ai yang bales')
+        console.log('pesan dari dia adalah: ' + messageBody)
+        const userQuestion = message.body.substring(3)
+        console.log({ userQuestion })
+        message.reply(userQuestion)
+     }
+})
+
 
 client.initialize()
 
