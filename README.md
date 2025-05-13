@@ -19,8 +19,8 @@ WADeepseek adalah bot WhatsApp yang menggunakan API untuk memberikan jawaban ber
 1. Clone repositori ini:
 
    ```bash
-   git clone https://github.com/username/wadeepseek.git
-   cd wadeepseek
+   git clone https://github.com/ihell/waDeepseek.git
+   cd waDeepseek
    ```
 
 2. Instal dependensi:
