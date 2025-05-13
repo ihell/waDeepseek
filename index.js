@@ -8,7 +8,11 @@ const app = express()
 const port = process.env.PORT || 3000
 
 const client = new Client({
-    authStrategy: new LocalAuth({ clientId: 'RukaChan'})
+    authStrategy: new LocalAuth({ clientId: 'RukaChan'}),
+    puppeteer: {
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    }
 })
 
 const getOllamaChatCompletion = async messageFromUser => {
